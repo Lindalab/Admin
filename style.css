@@ -1,17 +1,80 @@
 /* Googlefont Poppins CDN Link */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+:root {
+  --Ash-red: #700505;
+  --Ash-lightred: #D60B0B;
+  --table-red: #950808;
+  --light-red: #EC8989;
 }
 
 body {
-    color: #404E67;
-    background: #F5F7FA;
-    font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  font-family: 'Gabriela';
+  font-weight: normal;
+  height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: var(--Ash-red);
+  color: #FFFFFF;
+  float: left;
+  clear: right;
+  height: 100vh;
+  position: fixed;
+}
+
+.nav-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul a{
+    text-decoration: none;
+}
+
+
+#list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#active {
+  background-color: var(--Ash-lightred);
+}
+
+.links {
+  font-size: 18px;
+  font-weight: 700;
+  height: 75px;
+  width: 280px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all ease-in-out 0.25s;
+}
+
+.link {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.links:hover {
+  background-color: var(--Ash-lightred);
+}
+
+.nav-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
 }
 
 .table-wrapper {

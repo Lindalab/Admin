@@ -1,4 +1,6 @@
-
+<?php
+require_once("adminNavbar.php");
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -26,67 +28,12 @@
 
 <body>
 
-    <!--Nava bar of the Dashboard-->
-    <div class="sidebar">
-        <div class="logo-details">
-            <i class='bx bxl-c-plus-plus'></i>
-            <span class="logo_name">AEC</span>
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="Stakeholder.php">
-                    <i class="bx bx-user  user student" aria-hidden="true"></i>
-                    <span class="links_name">Stakeholders</span>
-                </a>
-            </li>
-            <li>
-                <a href="Events.php">
-                    <i class='bx bx-calendar'></i>
-                    <span class="links_name">Events</span>
-                </a>
-            </li>
-            <li>
-                <a href="Departments and roles.php">
-                    <i class='bx bx-building'></i>
-                    <span class="links_name">Departments</span>
-                </a>
-            </li>
-            <li>
-                <a href="Projects.php" class="active">
-                    <i class='bx bx-file'></i>
-                    <span class="links_name">Project</span>
-                </a>
-            </li>
+    <nav>
+        <?php
 
-            <li>
-                <a href="Sponsor.php">
-                    <i class='bx bx-book-alt'></i>
-                    <span class="links_name">Sponsors</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="Courses.php">
-                    <i class='bx bx-message'></i>
-                    <span class="links_name">Courses</span>
-                </a>
-            </li>
-            <li>
-                <a href="grant.php">
-                    <i class='bx bx-credit-card-front'></i>
-                    <span class="links_name">Grants</span>
-                </a>
-            </li>
-
-            <li class="log_out">
-                <a href="Clientside/php/Adminpage.php">
-                    <i class='bx bx-log-out'></i>
-                    <span class="links_name">Log out</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
+        adminNavbar(null, null, null, null, null, null, "active");
+        ?>
+    </nav>
 
     <!--Top search bar and choose a file-->
     <section class="home-section">
@@ -100,10 +47,10 @@
                 <i class='bx bx-search'></i>
             </div>
 
-            <form  action="../Model/uploadProject.php"  method="post" >
-            <input type="file" id="upload" hidden/>
-            <label for="upload">Choose file</label>
-          </form>
+            <form action="../Model/uploadProject.php" method="post">
+                <input type="file" id="upload" hidden />
+                <label for="upload">Choose file</label>
+            </form>
         </nav>
 
         <!--Small containers containing the sum/count details-->
@@ -214,18 +161,18 @@
                             <!---Populating the table with entries-->
                             <tbody>
                                 <?php
-                            // displayProjects();
-                            ?>
+                                // displayProjects();
+                                ?>
                             </tbody>
                         </table>
 
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- ADD TO PROJECT -->
-            
+
             <div id="addEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -236,13 +183,13 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    
+
                                     <p>Department Name</p>
 
-                                    <select name="depart_id" class = "form-control" required>
-                                         <?php
+                                    <select name="depart_id" class="form-control" required>
+                                        <?php
                                         //    displaySelectDepartment();
-                                         ?>
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -254,16 +201,16 @@
                                     <label>Project Description</label>
                                     <textarea class="form-control" id="w3review" name="prdescription" rows="4" cols="50"></textarea>
                                 </div>
-                                
+
                                 <div class="form-group">
-                                <label>Communication Type</label><br>
-                                <select name="Communicationtype" id="cars">
+                                    <label>Communication Type</label><br>
+                                    <select name="Communicationtype" id="cars">
                                         <option value="Whatsapp">Whatsapp</option>
                                         <option value="phonecall">phonecall</option>
                                         <option value="others">others</option>
-                                </select>
+                                    </select>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label>Project_status</label>
                                     <select name="Project_status" id="cars">
@@ -271,9 +218,9 @@
                                         <option value="Prototyping">Prototyping</option>
                                         <option value="testing">Testing</option>
                                         <option value="in-opertion">In-opertion</option>
-                                </select>
+                                    </select>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label>Project Industry</label>
                                     <input type="text" class="form-control" name="Project_industry" required>
@@ -289,10 +236,10 @@
                                         <option value="Business enterprise">Business enterprise</option>
                                         <option value="Social projectg">Social project</option>
                                         <option value="Others">Others</option>
-                                    
-                                </select>
+
+                                    </select>
                                 </div>
-                                
+
 
 
                             </div>
@@ -418,13 +365,13 @@
                         <!---Populating the table with entries-->
                         <tbody>
                             <?php
-                        // echo displayProjectSDG();
-                        ?>   
-                    </tbody>
+                            // echo displayProjectSDG();
+                            ?>
+                        </tbody>
                     </table>
 
-                   
-                    
+
+
                 </div>
             </div>
         </div>

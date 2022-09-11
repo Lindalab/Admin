@@ -1,5 +1,6 @@
-
-
+<?php
+require_once("adminNavbar.php");
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -20,72 +21,19 @@
     <link rel="stylesheet" href="crudStylesheet.css">
     <script src="crud.js"></script>
     <script>
-        function changeID(userId){                       
-            document.getElementById('deleteId').setAttribute('value',userId);
-            }
+        function changeID(userId) {
+            document.getElementById('deleteId').setAttribute('value', userId);
+        }
     </script>
 </head>
 
 <body>
-    <div class="sidebar">
-    <div class="logo-details">
-            <i class='bx bxl-c-plus-plus' ></i>
-            <span class="logo_name" >AEC</span>
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="Stakeholder.php" class="active">
-                    <i class="bx bx-user  user student" aria-hidden="true"></i>
-                    <span class="links_name">Stakeholders</span>
-                </a>
-            </li>
-            <li>
-                <a href="Events.php">
-                    <i class='bx bx-calendar'></i>
-                    <span class="links_name">Events</span>
-                </a>
-            </li>
-            <li>
-                <a href="Departments and roles.php">
-                    <i class='bx bx-building'></i>
-                    <span class="links_name">Departments</span>
-                </a>
-            </li>
-            <li>
-                <a href="Projects.php">
-                    <i class='bx bx-file'></i>
-                    <span class="links_name">Project</span>
-                </a>
-            </li>
+    <nav>
+        <?php
 
-            <li>
-                <a href="Sponsor.php">
-                    <i class='bx bx-book-alt'></i>
-                    <span class="links_name">Sponsors</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="Courses.php">
-                    <i class='bx bx-message'></i>
-                    <span class="links_name">Courses</span>
-                </a>
-            </li>
-            <li>
-                <a href="grant.php">
-                    <i class='bx bx-credit-card-front'></i>
-                    <span class="links_name">Grants</span>
-                </a>
-            </li>
-
-            <li class="log_out">
-                <a href="Clientside/php/Adminpage.php">
-                    <i class='bx bx-log-out'></i>
-                    <span class="links_name">Log out</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+        adminNavbar(null, null, null, null, null, null, "active");
+        ?>
+    </nav>
 
     <section class="home-section">
         <nav>
@@ -97,17 +45,17 @@
                 <input type="text" placeholder="Search...">
                 <i class='bx bx-search'></i>
             </div>
-             
-            
-
-              <form  action="../Model/uploadStIndividual.php"  method="post" >
-               <input type="file" id="upload" hidden/>
-            <label for="upload">Upload Stakeholders</label>
-            
-          </form>
 
 
-           
+
+            <form action="../Model/uploadStIndividual.php" method="post">
+                <input type="file" id="upload" hidden />
+                <label for="upload">Upload Stakeholders</label>
+
+            </form>
+
+
+
 
         </nav>
 
@@ -115,12 +63,12 @@
             <div class="overview-boxes">
                 <div class="box">
                     <div class="right-side">
-                        <div class="box-topic">Total Stakeholder</div>
+                        <div class="box-topic">Total Stakeholders</div>
                         <div class="number">
-                                <?php
-                                
-                                echo 8;
-                                ?>
+                            <?php
+
+                            echo 8;
+                            ?>
 
                         </div>
                         <div class="indicator">
@@ -162,7 +110,7 @@
                 </div>
                 <div class="box">
                     <div class="right-side">
-                        <div class="box-topic">Total Companies</div>
+                        <div class="box-topic">Total Coaches</div>
                         <div class="number">
                             <?php
                             echo 10;
@@ -192,7 +140,7 @@
                                     <input type="text" style="width:250px;" class="form-control" id="myInput" onkeyup="_filter()" placeholder="Search for users ... " title="Type in a sponsor type">
 
                                 </div>
-                                
+
                             </div>
                         </div>
                         <table class="table table-striped table-hover">
@@ -215,14 +163,14 @@
                             </thead>
                             <tbody>
                                 <?php
-                                    // displaytables();
+                                // displaytables();
 
                                 ?>
-                              
+
 
                             </tbody>
                         </table>
-                    
+
                     </div>
                 </div>
             </div>
@@ -259,7 +207,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Gender</label><br>
-    
+
                                     <select name="gender" id="cars">
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -269,10 +217,10 @@
                                 <div class="form-group">
                                     <p>Role</p>
 
-                                    <select name="role_id" class = "form-control" required>
-                                         <?php
-                                            // displaySelectRoles();
-                                         ?>
+                                    <select name="role_id" class="form-control" required>
+                                        <?php
+                                        // displaySelectRoles();
+                                        ?>
                                     </select>
                                 </div>
                             </div>
@@ -332,12 +280,12 @@
                 </div>
             </div>
 
-            
-
-           
 
 
-           
+
+
+
+
     </section>
 
     <script>

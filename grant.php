@@ -1,3 +1,6 @@
+<?php
+require_once("adminNavbar.php");
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -20,65 +23,12 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="logo-details">
-            <i class='bx bxl-c-plus-plus'></i>
-            <span class="logo_name">AEC</span>
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="Stakeholder.php">
-                    <i class="bx bx-user  user student" aria-hidden="true"></i>
-                    <span class="links_name">Stakeholders</span>
-                </a>
-            </li>
-            <li>
-                <a href="Events.php">
-                    <i class='bx bx-calendar'></i>
-                    <span class="links_name">Events</span>
-                </a>
-            </li>
-            <li>
-                <a href="Departments and roles.php">
-                    <i class='bx bx-building'></i>
-                    <span class="links_name">Departments</span>
-                </a>
-            </li>
-            <li>
-                <a href="Projects.php">
-                    <i class='bx bx-file'></i>
-                    <span class="links_name">Project</span>
-                </a>
-            </li>
+    <nav>
+        <?php
 
-            <li>
-                <a href="Sponsor.php">
-                    <i class='bx bx-book-alt'></i>
-                    <span class="links_name">Sponsors</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="Courses.php">
-                    <i class='bx bx-message'></i>
-                    <span class="links_name">Courses</span>
-                </a>
-            </li>
-            <li>
-                <a href="grant.php" class="active">
-                    <i class='bx bx-credit-card-front'></i>
-                    <span class="links_name">Grants</span>
-                </a>
-            </li>
-
-            <li class="log_out">
-                <a href="Clientside/php/Adminpage.php">
-                    <i class='bx bx-log-out'></i>
-                    <span class="links_name">Log out</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+        adminNavbar(null, null, null, null, null, null, "active");
+        ?>
+    </nav>
 
     <section class="home-section">
         <nav>
@@ -102,9 +52,9 @@
                     <div class="right-side">
                         <div class="box-topic" style="color: #634242">Total Grants received</div>
                         <div class="number" style="color:#634242">
-                        <?php
-                        echo 8; // echo totalGrantRecieved();
-                        ?>
+                            <?php
+                            echo 8; // echo totalGrantRecieved();
+                            ?>
                         </div>
                         <div class="indicator">
                             <i class='bx bx-up-arrow-alt'></i>
@@ -135,7 +85,7 @@
 
                 <div class="box">
                     <div class="right-side">
-                        <div class="box-topic" style="color:rgb(84, 20, 20)">Projects Under Grant</div>
+                        <div class="box-topic" style="color:rgb(84, 20, 20)">Business Grant</div>
                         <div class="number" style="color:rgb(84, 20, 20)"><?php
                                                                             echo 10;
                                                                             // echo displayTotalProjectUnderGrants()
@@ -306,7 +256,7 @@
                 </div>
             </div>
 
-        
+
 
     </section>
 

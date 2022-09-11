@@ -1,5 +1,6 @@
-
-
+<?php
+require_once("adminNavbar.php");
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -22,66 +23,12 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="logo-details">
-            <i class='bx bxl-c-plus-plus'></i>
-            <span class="logo_name">AEC</span>
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="Stakeholder.php">
-                    <i class="bx bx-user  user student" aria-hidden="true"></i>
-                    <span class="links_name">Stakeholders</span>
-                </a>
-            </li>
-            <li>
-                <a href="Events.php" class="active">
-                    <i class='bx bx-calendar'></i>
-                    <span class="links_name">Events</span>
-                </a>
-            </li>
-            <li>
-                <a href="Departments and roles.php">
-                    <i class='bx bx-building'></i>
-                    <span class="links_name">Departments</span>
-                </a>
-            </li>
-            <li>
-                <a href="Projects.php">
-                    <i class='bx bx-file'></i>
-                    <span class="links_name">Project</span>
-                </a>
-            </li>
+    <nav>
+        <?php
 
-            <li>
-                <a href="Sponsor.php">
-                    <i class='bx bx-book-alt'></i>
-                    <span class="links_name">Sponsors</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="Courses.php">
-                    <i class='bx bx-message'></i>
-                    <span class="links_name">Courses</span>
-                </a>
-            </li>
-            <li>
-                <a href="grant.php">
-                    <i class='bx bx-credit-card-front'></i>
-                    <span class="links_name">Grants</span>
-                </a>
-            </li>
-
-            <li class="log_out">
-                <a href="Clientside/php/Adminpage.php">
-                    <i class='bx bx-log-out'></i>
-                    <span class="links_name">Log out</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
+        adminNavbar(null, null, null, null, null, null, "active");
+        ?>
+    </nav>
     <section class="home-section">
         <nav>
             <div class="sidebar-button">
@@ -93,10 +40,10 @@
                 <i class='bx bx-search'></i>
             </div>
 
-            <form  action="..\Model\uploadevents.php"  method="post" >
-            <input type="file" id="upload" hidden/>
-            <label for="upload">Choose file</label>
-          </form>
+            <form action="..\Model\uploadevents.php" method="post">
+                <input type="file" id="upload" hidden />
+                <label for="upload">Choose file</label>
+            </form>
 
         </nav>
 
@@ -107,8 +54,8 @@
                         <div class="box-topic">Total Events</div>
                         <div class="number">
                             <?php
-                            echo 8;// echo totalEvents();
-                        ?>
+                            echo 8; // echo totalEvents();
+                            ?>
                         </div>
                         <div class="indicator">
                             <i class='bx bx-up-arrow-alt'></i>
@@ -122,7 +69,7 @@
                         <div class="box-topic">Career Fairs</div>
                         <div class="number">
                             <?php
-                            echo 8;// echo totalCareerFair();
+                            echo 8; // echo totalCareerFair();
                             ?>
                         </div>
                         <div class="indicator">
@@ -153,7 +100,7 @@
                         <div class="box-topic">Info Session</div>
                         <div class="number">
                             <?php
-                            echo 8;// echo totalInforSession();
+                            echo 8; // echo totalInforSession();
                             ?>
                         </div>
                         <div class="indicator">
@@ -200,18 +147,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               
-                            <?php
-                            // displayEvents();
-                            ?>
+
+                                <?php
+                                // displayEvents();
+                                ?>
 
                             </tbody>
                         </table>
-                        
+
                     </div>
                 </div>
             </div>
-           
+
             <div id="addEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -223,9 +170,9 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <p>Department Name</p>
-                                    <select name="depart_id" class = "form-control" required>
+                                    <select name="depart_id" class="form-control" required>
                                         <?php
-                                            // displaySelectDepartment();
+                                        // displaySelectDepartment();
                                         ?>
                                     </select>
                                 </div>
@@ -234,16 +181,16 @@
                                     <label>Event Name</label>
                                     <input type="text" class="form-control" name="evname" required>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label>Start date</label>
-                                    <input type="date" class="form-control" name="evsdate"required>
+                                    <input type="date" class="form-control" name="evsdate" required>
                                 </div>
                                 <div class="form-group">
                                     <label>End date</label>
                                     <input type="date" class="form-control" name="evndate" required>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label>Event target group</label>
                                     <select name="event_target_group" id="cars">
@@ -251,9 +198,9 @@
                                         <option value="Alumni">Alumni</option>
                                         <option value="Clubs">Clubs</option>
                                         <option value="Other">Other</option>
-                                </select>
+                                    </select>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label>Event type</label>
                                     <select name="event_type" id="cars">
@@ -261,7 +208,7 @@
                                         <option value="Hackathon">Hackathon</option>
                                         <option value="Competition">Competition</option>
                                         <option value="Career Fair">Career Fair</option>
-                                </select>
+                                    </select>
                                 </div>
 
                                 <div class="form-group">
@@ -271,7 +218,7 @@
                             </div>
                             <div class="modal-footer">
                                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                <input type="submit" class="btnAdd btn-success" name= "submit" value="Add">
+                                <input type="submit" class="btnAdd btn-success" name="submit" value="Add">
                             </div>
                         </form>
                     </div>
@@ -345,7 +292,7 @@
                 </div>
             </div>
 
-            
+
 
     </section>
 
